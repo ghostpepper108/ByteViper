@@ -3,7 +3,7 @@ Proof of concept of how AI could be used by malwares
 
 **DISCLAIMER:** This is a proof of concept for researching how AI could potentially be used by threat actors/adversaries for criminal activities. This source code **_should not to be used_** for malicious purposes. Due to the nature of this code being an open source, if it is ever used, I should not be held liable/responsible for any harm/damages/loss caused by others in any way including using the code for nefarious/criminal purposes, harming/damaging of any nature and any kind.
 
-Introduction:
+**Introduction:**
 Malwares comens in various kinds. A typical malware consists of two parts, a dropper and a payload. They would do the following:
 
 1. A dropper gets deployed/installed on a target system during intial access like phishing, compromised accounts etc.
@@ -14,8 +14,8 @@ Malware developers use plenty of techniques to hide their precious payloads. The
 
 Malware detections have evolved overtime and today's machine learning (AI) based detection tools like EDRs are extremely powerful in detecting malicous activities because they are not based on static rules but they are trained to detect malicous behaviors when a piece of code run. In fact, evading AI based EDRs are rare and malware authors are actively researching ways to bypass them.
 
-Motivation for ByteViper:
+**Motivation for ByteViper:**
 Since AI is used by malware detection tools (defensive security), it should also possible to have a malware that uses AI to evade these intelligent EDRs. With AI in malwares, things change a lot for both offensive and defensive security. It levels the field. Its not easy anymore for EDRs/AVs to detect an AI based malware. It becomes a battle between intelligent systems.
 
-How does ByteViper work:
+**How does ByteViper work:**
 This section is the most interesting piece that everyone would be interested in. ByteViper has 2 parts, a AI module and a dropper. The AI module is python based and uses Sentence Transformers to supply the payload to the dropper. The dropper is a simple C program that executes the payload. The dropper could use just about any techniques to run the payload including remote execution.
