@@ -18,4 +18,11 @@ $${\color{lightgreen}Motivation \space for \space ByteViper:}$$
 Since AI is used by malware detection tools (defensive security), it should also possible to have a malware that uses AI to evade these intelligent EDRs. With AI in malwares, things change a lot for both offensive and defensive security. It levels the field. Its not easy anymore for EDRs/AVs to detect an AI based malware. It becomes a battle between intelligent systems.
 
 $${\color{lightgreen}How \space does \space ByteViper \space work:}$$
-This section is the most interesting piece that everyone would be interested in. ByteViper has 2 parts, a AI module and a dropper. The AI module is python based and uses Sentence Transformers to supply the payload to the dropper. The dropper is a simple C program that executes the payload. The dropper could use just about any techniques to run the payload including remote execution.
+This section is the most interesting piece that everyone would be interested in. ByteViper has 2 parts, a AI module and a dropper. The AI module is python based and uses Sentence Transformers to supply the payload to the dropper. The dropper is a simple C program that executes the payload. The dropper could use just about any techniques to run the payload including remote execution. 
+
+The interesting thing is that hex values of the payload in the dropper are all English words as shown below:
+
+<img width="1222" alt="image" src="https://github.com/ghostpepper108/ByteViper/assets/20723092/cf9eb3ce-14cf-42a0-8b57-cfaf8c2349fc">
+
+The dropper connects to AI engine, sends each of the english words and the AI engine returns the equivalent hex code. The dropper then replaces the english words with the hex code, one by one and then executes it.
+
