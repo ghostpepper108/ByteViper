@@ -31,7 +31,8 @@ print("Remove all \\x and \" so that you are left with fc4883e4f0e8c000000041514
 print("Use this as your input next\n")
 print("2. You would receive the AI generated payload which you embed it in your code\n")
 print("3. A pkl file would be created that hold the vectors\n")
-print("4. Place this file, in the same path, along with your dropper binary\n\n")
+print("4. Place this file, in the same path, along with your dropper binary\n")
+print("5. Place payload.py, in the same path, along with your dropper\n\n")
 print("*******INSTRUCTIONS END*******\n")
 
 hex_bytes = input('Enter hex values of your payload (No "0x" or "\\x" format, just plain hex values). Example: 55488b05b8130000:\n\n')
